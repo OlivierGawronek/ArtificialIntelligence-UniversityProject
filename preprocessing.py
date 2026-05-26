@@ -9,7 +9,7 @@ import os
 df = pd.read_csv('data/diabetes.csv')
 
 cols_with_zeros = ['Glucose', 'BloodPressure', 'SkinThickness', 'Insulin', 'BMI']
-drop_cols = ['Outcome', 'Glucose']
+drop_cols = ['Outcome', 'Insulin']
 df[cols_with_zeros] = df[cols_with_zeros].replace(0, np.nan)
 X = df.drop(drop_cols, axis=1)
 # X = df.drop('Glucose', axis=1)
